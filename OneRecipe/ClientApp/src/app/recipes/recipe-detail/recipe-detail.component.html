@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-xs-12">
+    <img
+      [src]="recipe.imagePath"
+      alt="{{ recipe.name }}"
+      class="img-responsive"
+      style="max-height: 150px;">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{ recipe.name }}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    {{ recipe.description }}
+  </div>
+</div>
+<hr>
+<h3>Ingredients</h3>
+<div class="row">
+  <div class="col-xs-12">
+    <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="recipe.ingredients">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ingredient of recipe.ingredients">
+          <td>{{ ingredient.name }}</td>
+          <td>{{ ingredient.amount }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-secondary" type="button" (click)="onAddToShoppingList()">To Shopping List</button> |
+    <button class="btn btn-success" type="button" (click)="onEditRecipe()">Edit Recipe</button> |
+    <button class="btn btn-danger" type="button" (click)="onDeleteRecipe()">Delete Recipe</button>
+  </div>
+</div>

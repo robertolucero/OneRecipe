@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OneRecipe</name>
+    </assembly>
+    <members>
+        <member name="M:OneRecipe.Controllers.AuthenticationController.Authenticate(OneRecipe.Application.DTOs.UserDto)">
+            <summary>
+            Authenticate an user
+            </summary>
+            <param name="user">UserDto</param>
+            <returns>Returns a token for a valid user.</returns>
+        </member>
+        <member name="M:OneRecipe.Controllers.RecipeController.GetRecipesAsync">
+            <summary>
+            Returns all recipes.
+            </summary>
+            <returns>RecipeDto list.</returns>
+        </member>
+        <member name="M:OneRecipe.Controllers.RecipeController.CreateRecipeAsync(OneRecipe.Application.DTOs.RecipeDto)">
+            <summary>
+            Create a new recipe
+            </summary>
+            <param name="recipe">Recipe to create</param>
+            <returns></returns>
+        </member>
+        <member name="M:OneRecipe.Controllers.RecipeController.UpdateRecipeAsync(OneRecipe.Application.DTOs.RecipeDto)">
+            <summary>
+            Create a new recipe
+            </summary>
+            <param name="recipe">Recipe to create</param>
+            <returns></returns>
+        </member>
+        <member name="M:OneRecipe.Controllers.RecipeController.DeleteRecipeAsync(System.Int32)">
+            <summary>
+            Deletes a recipe
+            </summary>
+            <param name="recipeId">Recipe ID to delete</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
