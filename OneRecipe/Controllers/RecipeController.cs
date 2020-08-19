@@ -42,7 +42,7 @@ namespace OneRecipe.Controllers
         {
             await service.CreateRecipeAsync(recipe);
 
-            return Ok();
+            return CreatedAtAction(nameof(GetRecipesAsync), recipe);
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace OneRecipe.Controllers
             
             await service.UpdateRecipeAsync(recipe);
 
-            return Ok();
+            return NoContent();
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace OneRecipe.Controllers
 
             await service.DeleteRecipeAsync(recipeId);
 
-            return Ok();
+            return NoContent();
         }
         #endregion
 
